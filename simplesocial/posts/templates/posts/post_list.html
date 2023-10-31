@@ -2,8 +2,9 @@
 {% load humanize %}
 
 {% block pre_post_content %}
-    <div class="col -md-4">
+    <div class="col-md-4">
         {% if request.user.is_authentictaed %}
+        <p>User is authenticated</p>
             <div class="card card-with-shadow">
                 <div class="content">
                     <h5 class="title">Your Groups</h5>

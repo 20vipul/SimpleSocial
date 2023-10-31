@@ -4,7 +4,7 @@
     <div class="col-md-4">
         <div class="content">
             {% if request.user.is_authenticated %}
-            <p>User is authenticated</p>
+            <!-- <p>User is authenticated</p> -->
                 <h2>Welcome Back!
                     <a href="{% url 'posts:for_user' username=user.username %}">
                         @{{user.username}}
@@ -16,14 +16,14 @@
             <p>Welcome to the Groups page!</p>
         </div>
         {% if request.user.is_authenticated %}
-        <p>User is authenticated</p>
+        <!-- <p>User is authenticated</p> -->
             <a href="{% url 'groups:create' %}" class="btn btn-md btn-fill btn-warning "><span class="glyphicon glyphicon-plus-sign">Create New Group !</span></a>
         {% endif %}
     </div>
 {% endblock %}
 
 {% block group_content %}
-    <div class="com-md-8">
+    <div class="col-md-8">
         <div class="list-group ">
             {% for group in object_list %}
             <a class="list-group-item " href="{% url 'groups:single' slug=group.slug %}">
